@@ -18,3 +18,10 @@ In order to predict succinylation site using your own sequence, you need to have
 
 
 ## Extracting ProtT5 Features (To be updated)
+
+
+
+## Citation
+Pokharel, S., Pratyush, P., Heinzinger, M. et al. Improving protein succinylation sites prediction using embeddings from protein language model. Sci Rep 12, 16933 (2022). https://doi.org/10.1038/s41598-022-21366-2
+
+Link: https://rdcu.be/cXFfM
