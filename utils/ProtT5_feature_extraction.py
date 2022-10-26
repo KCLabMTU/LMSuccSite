@@ -31,5 +31,5 @@ def find_features_full_seq(sequences_Example):
     embedding = embedding.last_hidden_state.cpu().numpy()
 
     seq_len = (attention_mask[0] == 1).sum()
-    seq_emd = embedding[0][:seq_len-1] # Michael said it should be seq_len # checked, should be -1
+    seq_emd = embedding[0][:seq_len-1]
     return seq_emd

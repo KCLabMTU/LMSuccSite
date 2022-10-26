@@ -23,6 +23,9 @@ from tensorflow.keras.models import Model, Sequential, load_model
 from tensorflow.keras.optimizers import Adam
 from tqdm import tqdm
 
+# import feature extraction code
+
+
 
 def extract_one_windows_position(sequence,site,window_size=33):
     '''
