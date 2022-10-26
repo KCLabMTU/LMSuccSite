@@ -2,13 +2,21 @@
 ### Introduction
 Improving Protein Succinylation Sites Prediction Using Features Extracted from Protein Language Model
 
-### Model Evaluation using the existing benchmark independent test set
+### Install libraries
+`pip install -r requirements.txt`
+
+### Model evaluation using the existing benchmark independent test set
 Please run the `evaluate_model.py` script.
 
-### To predict your own sequence 
+### To run `LMSuccSite` model on your own sequences 
 In order to predict succinylation site using your own sequence, you need to have two inputs:
-1. Sequence Peptide of size 33
-2. The ProtT5 features of the sequence extracted from that particular site residue.
+1. Clone the LMSuccSite Repo
+ `git clone git@github.com:KCLabMTU/LMSuccSite.git`
+2. Copy sequences to `input/sequence.fasta`
+3. Install transformers 
+`pip install -q SentencePiece transformers`
+4. Run `predict.py`
+5. Find results inside `output` folder
 
 
 ### To train the model using our training set (To be updated)
