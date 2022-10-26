@@ -25,3 +25,7 @@ In order to predict succinylation site using your own sequence, you need to have
 Pokharel, S., Pratyush, P., Heinzinger, M. et al. Improving protein succinylation sites prediction using embeddings from protein language model. Sci Rep 12, 16933 (2022). https://doi.org/10.1038/s41598-022-21366-2
 
 Link: https://rdcu.be/cXFfM
+
+
+## Contact
+Please send an email to `sureshp@mtu.edu` (CC: `dbkc@mtu.edu`) for any kind of queries and discussions.
