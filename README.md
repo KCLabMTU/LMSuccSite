@@ -61,7 +61,7 @@ In order to predict succinylation site using your own sequence, you need to have
 
 ### Training and other experiments
 1. Find training data at `data/train/` folder
-2. Find all the codes and models related to training at `training_experiments` folder (To be updated).
+2. Find all the codes and models related to training at `training codes` folder.
 
 
 ## Citation
