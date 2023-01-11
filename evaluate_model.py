@@ -3,24 +3,22 @@
       Email   : sureshp@mtu.edu
 """
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import xgboost as xgb
 from Bio import SeqIO
 from keras import backend as K
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.manifold import TSNE
 from sklearn.metrics import accuracy_score, confusion_matrix, matthews_corrcoef
-from sklearn.svm import SVC
 from sklearn.utils import shuffle
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.layers import (Conv1D, Dense, Dropout, Flatten, Input,
-                                     LeakyReLU, MaxPooling1D, Reshape)
-from tensorflow.keras.losses import BinaryCrossentropy
-from tensorflow.keras.models import Model, Sequential, load_model
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model
+
+
+"""
+define file paths and other parameters
+"""
+
+model_path = 'models/LMSuccSite.h5'
+win_size = 33
+cutoff_threshold = 0.5
 
 
 def get_input_for_embedding(fasta_file):
@@ -67,15 +65,17 @@ test_negative_embedding = get_input_for_embedding('data/test/fasta/test_negative
 # stack positive and negative data together
 X_test_embedding = np.vstack((test_positive_embedding,test_negative_embedding))
 
-# model_3
-combined_model = load_model('models/LMSuccSite.h5')
+# load saved model
+combined_model = load_model(model_path)
 
+# predict test data
 y_pred = combined_model.predict([X_test_embedding,X_test_pt5]).reshape(y_test.shape[0],)
-y_pred = (y_pred > 0.50)
+y_pred = (y_pred > cutoff_threshold)
 y_pred = [int(i) for i in y_pred]
 y_test = np.array(y_test)
 y_pred = np.array(y_pred)
 
+# calculate performance metrics
 cm = confusion_matrix(y_test, y_pred)
 mcc = matthews_corrcoef(y_test, y_pred)
 acc = accuracy_score(y_test, y_pred)
