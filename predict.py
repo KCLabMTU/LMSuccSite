@@ -137,8 +137,8 @@ for seq_record in tqdm(SeqIO.parse(input_fasta_file, "fasta")):
     # generate embedding features and window for each amino acid in sequence
     for index, amino_acid in enumerate(sequence):
         
-        # check if AA is 'S' or 'T'
-        if amino_acid in ['S', 'T']:
+        # check if AA is 'K'
+        if amino_acid in ['K']:
             
             # we consider site one more than index, as index starts from 0
             site = index + 1
