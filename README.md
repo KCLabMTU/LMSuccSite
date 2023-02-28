@@ -1,6 +1,9 @@
 ## LMSuccSite
 Improving Protein Succinylation Sites Prediction Using Features Extracted from Protein Language Model
 
+## Webserver
+http://kcdukkalab.org/LMSuccSite/
+
 ## Authors
 Suresh Pokharel<sup>1</sup>, Pawel Pratyush<sup>1</sup>, Michael Heinzinger<sup>2</sup>, Robert H. Newman<sup>3</sup>, Dukka B KC<sup>1*</sup>
 <br>
@@ -39,17 +42,13 @@ xgboost==1.5.0
 </code>
 
 ### Install Transformers
-<code>
-pip install -q SentencePiece transformers
-</code>
+<code> pip install -q SentencePiece transformers</code>
 
 ### Model evaluation using the existing benchmark independent test set
 Please run the `evaluate_model.py` script.
 To evaluate our model on the independent test set, we have already placed the test sequences and corresponding ProtT5 features in `data/test/` folder. Once you install the requirements, run the following command:
 <br>
-<code>
- python evaluate_model.py
-</code>
+<code>python evaluate_model.py</code>
 
 ### To run `LMSuccSite` model on your own sequences 
 
@@ -72,3 +71,6 @@ Link: https://rdcu.be/cXFfM
 
 ## Contact
 Please send an email to sureshp@mtu.edu (CC: dbkc@mtu.edu) for any kind of queries and discussions.
+
+## Webserver
+http://kcdukkalab.org/LMSuccSite/
