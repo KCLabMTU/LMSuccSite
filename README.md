@@ -70,7 +70,7 @@ Link: https://rdcu.be/cXFfM
 
 
 ## Contact
-Please send an email to sureshp@mtu.edu (CC: dbkc@mtu.edu) for any kind of queries and discussions.
+Please send an email to sureshp@mtu.edu (CC: dbkc@mtu.edu, ppratyush@mtu.edu) for any kind of queries and discussions.
 
 ## Webserver
 http://kcdukkalab.org/LMSuccSite/
