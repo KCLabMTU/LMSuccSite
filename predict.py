@@ -124,6 +124,9 @@ def get_input_for_embedding(window):
 # create results dataframe
 results_df = pd.DataFrame(columns = ['prot_desc', 'position','site_residue', 'probability', 'prediction'])
 
+# load model
+combined_model = load_model(model_path)
+
 for seq_record in tqdm(SeqIO.parse(input_fasta_file, "fasta")):
     prot_id = seq_record.id
     sequence = str(seq_record.seq)
@@ -151,9 +154,6 @@ for seq_record in tqdm(SeqIO.parse(input_fasta_file, "fasta")):
             
             # get ProtT5 features extracted above
             X_test_pt5 = pt5_all[index]
-            
-            # load model
-            combined_model = load_model(model_path)
             
             # prediction results           
             y_pred = combined_model.predict([X_test_embedding.reshape(1, win_size), np.array(X_test_pt5.reshape(1,1024))], verbose = 0)[0][0]
