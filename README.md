@@ -26,7 +26,7 @@ Improving Protein Succinylation Sites Prediction Using Features Extracted from P
 </div>
 
 ## Web Server
-<a href="http://kcdukkalab.org/LMSuccSite/" target="_blank">http://kcdukkalab.org/LMSuccSite/</a>
+<a href="http://kcdukkalab.org/LMSuccSite/" target="_blank">http://kcdukkalab.org/LMSuccSite/</a>  (Not working at the moment, we are working to fix issues)
 
 ## Authors
 Suresh Pokharel<sup>1</sup>, Pawel Pratyush<sup>1</sup>, Michael Heinzinger<sup>2</sup>, Robert H. Newman<sup>3</sup>, Dukka B KC<sup>1*</sup>
